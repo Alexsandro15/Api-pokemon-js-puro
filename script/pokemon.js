@@ -1,5 +1,13 @@
 let erropkm = document.querySelector(".erro");
 let cardpkm = document.querySelector(".card-pokemon");
+function retirarCard(){
+        cardpkm.innerHTML = "";
+        cardpkm.classList.remove("card-pokemon");
+        cardpkm.classList.add("erro-card");
+}
+function colocaCard(){
+    cardpkm.classList.add("card-pokemon");
+}
 async function usandoApiPokemon(nome) {
     try{
         console.log('Iniciando a requisição...');
@@ -38,9 +46,7 @@ async function usandoApiPokemon(nome) {
     }catch(erro){
         erropkm.style.color = 'red';
         erropkm.innerHTML = `pokemon: ${nome} ñ encontrado`;
-        cardpkm.innerHTML = "";
-        cardpkm.classList.remove("card-pokemon");
-        cardpkm.classList.add("erro-card");
+        retirarCard();
         throw new Error(erro.message);
     }finally{
         console.log("requisição finalizada");
@@ -54,6 +60,7 @@ try{
     let nome = document.querySelector("#nomepkm").value;
     if(nome.length == 0){
         erropkm.innerHTML = `o nome ñ pode ser vazio`;
+        retirarCard();
         throw new Error('Erro: o nome não pode ser vazio');
     }
     erropkm.innerHTML = ``;
@@ -63,7 +70,7 @@ try{
     
     if(imagem && arraypkm && tipos){
 
-        cardpkm.classList.add("card-pokemon");
+        colocaCard();
         function iniciarAnimacao() {
             cardpkm.classList.add("giro");
         }
