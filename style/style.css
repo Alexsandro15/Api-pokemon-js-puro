@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    padding: 20px;
+}
+header button{
+    width: 100px;
+    padding: 7px;
+    background-color: rgb(141, 128, 128);
+    color:white;
+    box-shadow: -1px 5px 2px 1px black;
+    border-radius: 3px;
+}
+header input{
+    padding: 7px;
+    background-color: white;
+    box-shadow: -1px 5px 2px 1px black;
+    border-radius: 3px;
+}
+header button:active{
+    box-shadow: 0 3px black;
+    transform: translateY(2px);
+}
+#pokemons{
+    display: flex;
+    justify-content: center;
+    /*background-color: brown;*/
+    padding: 10px;
+}
+@keyframes giro{
+    From{transform: rotateY(0deg);}
+    To{transform: rotateY(360deg);}
+    }
+#card-pokemon{
+    display:none;
+    flex-direction: column;
+    background: repeating-linear-gradient(to bottom, rgb(241, 71, 71), rgb(233, 136, 136),rgb(243, 243, 9), rgb(185, 168, 7));
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    border: 3px solid rgb(236, 236, 11);
+    box-shadow: -1px 5px 2px 1px black;
+    font-size:20px;
+}
+.giro{
+    animation-name: giro; 
+    animation-duration: 1s;
+}  
+#card-pokemon hr{
+    width: 2px;
+    height: 2px;
+    background-color: blue;
+    color: blue;
+}
+#card-pokemon img{
+    width: 300px;
+    height: 220px;
+}
+#infocima > #tipos > #tipo{
+    width: 30px;
+    height: 30px;
+}
+#infocima{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+#tipos{
+    height: 30px;
+}
+#imgpkm{
+    background-image: url("../backgrounds/floresta.jpg");
+    background-position:  bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid rgb(186, 189, 18);
+    margin: 10px 0;
+}
+#info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 800;
+    
+}
+#dados{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#nome{
+    padding: 7px;
+    font-weight: 800;
+}
+#barra{
+    margin-bottom: 5px;
+}
