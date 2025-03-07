@@ -8,13 +8,16 @@
 </head>
 <body>
     <header>
-        <form action=""><input type="text" placeholder="escreva nome do pokemon" id="nomepkm"> <button type="submit" id="btn">pesquisar</button>
+        <form action=""><input type="text" placeholder="número ou nome do pokemon" id="nomepkm" pattern="[A-Za-z0-9]{2,}" title="coloque pelo menos 1 letra ou número"> <button type="submit" id="btn">pesquisar</button>
 
         </form>
     </header>
     <section id="pokemons">
-        <div id="card-pokemon">
+        <div class="card-pokemon">
             
+        </div>
+        <div class="erro">
+
         </div>
     </section>
     

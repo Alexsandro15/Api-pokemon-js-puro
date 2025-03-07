@@ -30,11 +30,12 @@ header button:active{
     justify-content: center;
     padding: 10px;
 }
+
 @keyframes giro{
     From{transform: rotateY(0deg);}
     To{transform: rotateY(360deg);}
     }
-#card-pokemon{
+.card-pokemon{
     display:none;
     flex-direction: column;
     background: repeating-linear-gradient(to bottom, rgb(241, 71, 71), rgb(233, 136, 136),rgb(243, 243, 9), rgb(185, 168, 7));
@@ -46,17 +47,25 @@ header button:active{
     box-shadow: -1px 5px 2px 1px black;
     font-size:20px;
 }
+.erro-card{
+    background-color: white;
+}
+.erro{
+    background-color: white;
+    color: red;
+}
+
 .giro{
     animation-name: giro; 
     animation-duration: 1s;
 }  
-#card-pokemon hr{
+.card-pokemon hr{
     width: 2px;
     height: 2px;
     background-color: blue;
     color: blue;
 }
-#card-pokemon img{
+.card-pokemon img{
     width: 300px;
     height: 220px;
 }
@@ -74,7 +83,7 @@ header button:active{
     height: 30px;
 }
 #imgpkm{
-    background-image: url("../backgrounds/floresta.jpg");
+    background-image: url("../backgrounds/floresta3.png");
     background-position:  bottom;
     background-repeat: no-repeat;
     background-size: cover;
