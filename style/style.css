@@ -28,7 +28,6 @@ header button:active{
 #pokemons{
     display: flex;
     justify-content: center;
-    /*background-color: brown;*/
     padding: 10px;
 }
 @keyframes giro{

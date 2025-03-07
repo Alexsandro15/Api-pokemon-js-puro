@@ -1,31 +1,22 @@
-/*
-9)API do Pokemon
-https://pokeapi.co/api/v2/pokemon/nome do pokemon aqui
-
-pegue os moves salvo em uma var e habilidades em outra
-retorne moves e habilidades
-*/
 async function usandoApiPokemon(nome) {
     try{
-        console.log('Iniciando a requisição...'); // Adicione este log para verificar
-        // Fazendo a requisição GET
+        console.log('Iniciando a requisição...'); 
+        
         const apiUrl = `https://pokeapi.co/api/v2/pokemon/${nome}`;
         const response = await fetch(apiUrl);
 
-        // Verificando se a resposta foi bem-sucedida
+        
         if (!response.ok) {
             throw new Error('Erro na requisição: ' + response.status);
         }
 
-        // Convertendo a resposta para JSON
+        
         const data = await response.json();
 
-        // Exibindo os dados no console
-        //console.log('Dados recebidos da API do pokemon:', data);
         console.log("mostrando dados");
-        //let imagem = data.sprites.home.front_default;
+        
         let status = data.stats;
-        //let tipo = data.types[0].type.name;
+        
         let tipos = data.types;
         let tipospkm = [];
         tipos.forEach(tipo => {
@@ -73,9 +64,9 @@ if(imagem && arraypkm && tipos){
     }
     
     function pararAnimacao() {
-        cardpkm.style.animation = "none"; // Remove a animação
-        cardpkm.offsetHeight; // Força um reflow (truque para resetar a animação)
-        cardpkm.style.animation = null; // Restaura a animação original
+        cardpkm.style.animation = "none"; 
+        cardpkm.offsetHeight; 
+        cardpkm.style.animation = null; 
     }
     
 
